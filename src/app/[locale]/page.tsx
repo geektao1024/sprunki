@@ -77,10 +77,13 @@ export default function IndexPage({
                 {/* 游戏信息 */}
                 <div className="flex w-full items-center gap-4 sm:w-auto">
                   <div className="relative h-12 w-12 overflow-hidden rounded-lg bg-background sm:h-14 sm:w-14">
-                    <img
+                    <Image
                       src="/images/logo.png"
                       alt="Level Devil Logo"
+                      width={56}
+                      height={56}
                       className="h-full w-full object-contain"
+                      priority
                     />
                   </div>
                   <div className="space-y-1">
