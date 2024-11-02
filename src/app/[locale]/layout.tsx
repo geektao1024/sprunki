@@ -75,26 +75,27 @@ export async function generateMetadata({
     icons: {
       icon: [
         {
+          rel: 'icon',
           url: '/favicon/favicon.ico',
-          sizes: '32x32',
-          type: 'image/x-icon',
         },
         {
-          url: '/favicon/favicon-16x16.png',
-          sizes: '16x16',
+          rel: 'icon',
           type: 'image/png',
-        },
-        {
+          sizes: '32x32',
           url: '/favicon/favicon-32x32.png',
-          sizes: '32x32',
-          type: 'image/png',
         },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '16x16',
+          url: '/favicon/favicon-16x16.png',
+        }
       ],
       apple: {
+        rel: 'apple-touch-icon',
         url: '/favicon/apple-touch-icon.png',
-        sizes: '180x180',
-        type: 'image/png',
       },
+      shortcut: { url: '/favicon/favicon.ico' }
     },
     keywords: [
       'Level Devil',
@@ -125,7 +126,12 @@ export default function RootLayout({
   unstable_setRequestLocale(locale)
   return (
     <html lang={locale} suppressHydrationWarning>
-      <head />
+      <head>
+        <link rel="icon" href="/favicon/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+      </head>
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
