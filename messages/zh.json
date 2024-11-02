@@ -1,5 +1,10 @@
 {
   "Index": {
-    "title": "这是一个内置了 Shadcn UI、Tailwind CSS 和 next-intl 的 Next.js 模板。"
+    "title": "恶魔关卡",
+    "description": "这是一个现代化的前端开发模板"
+  },
+  "SiteConfig": {
+    "name": "恶魔关卡",
+    "description": "这是一个现代化的前端开发模板"
   }
 }

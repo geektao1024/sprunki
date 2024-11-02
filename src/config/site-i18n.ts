@@ -1,78 +1,43 @@
+import { NavItem } from '@/types/nav'
 import { Locale } from '@/i18n'
 
-type SiteConfig = {
+interface SiteConfig {
   name: string
   description: string
-  mainNav: { title: string; href: string }[]
+  mainNav: NavItem[]
   links: {
-    twitter: string
-    github: string
     docs: string
+    github: string
   }
 }
 
-const siteConfigBase: Record<Locale, SiteConfig> = {
+const baseConfig: Omit<SiteConfig, 'name' | 'description'> = {
+  mainNav: [],
+  links: {
+    docs: 'https://ui.shadcn.com',
+    github: 'https://github.com/shadcn/ui',
+  },
+}
+
+const translations = {
   en: {
-    name: "NSIT",
-    description: "This is a modern web development starter template that integrates Next.js, Tailwind CSS, ShadcnUI, and internationalization features, designed for quickly building efficient, customizable, and multilingual front-end projects.",
-    mainNav: [
-      {
-        title: "Home",
-        href: "/",
-      },
-      {
-        title: "About",
-        href: "/about",
-      },
-    ],
-    links: {
-      twitter: "https://twitter.com/leonzeng2024",
-      github: "https://github.com/LeonZeng919/next-shadcn-intl-template",
-      docs: "/docs",
-    },
+    name: 'Level Devil',
+    description: 'A modern front-end development template',
   },
   zh: {
-    name: "NSIT",
-    description: "这是一个集成了Next.js、Tailwind CSS、ShadcnUI和国际化功能的现代化Web开发启动模板，旨在快速搭建高效、可定制且多语言支持的前端项目。",
-    mainNav: [
-      {
-        title: "首页",
-        href: "/",
-      },
-      {
-        title: "关于",
-        href: "/about",
-      },
-    ],
-    links: {
-      twitter: "https://twitter.com/leonzeng2024",
-      github: "https://github.com/LeonZeng919/next-shadcn-intl-template",
-      docs: "/docs",
-    },
+    name: '恶魔关卡',
+    description: '这是一个现代化的前端开发模板',
   },
   fr: {
-    name: "NSIT",
-    description: "Ceci est un modèle de démarrage de développement web moderne qui intègre Next.js, Tailwind CSS, ShadcnUI et des fonctionnalités d'internationalisation, conçu pour construire rapidement des projets front-end efficaces, personnalisables et multilingues.",
-    mainNav: [
-      {
-        title: "Accueil",
-        href: "/",
-      },
-      {
-        title: "À propos",
-        href: "/about",
-      },
-    ],
-    links: {
-      twitter: "https://twitter.com/leonzeng2024",
-      github: "https://github.com/LeonZeng919/next-shadcn-intl-template",
-      docs: "/docs",
-    },
+    name: 'Level Devil',
+    description: 'Un modèle de développement frontal moderne',
   },
-
-  // 添加其他语言的配置...
 }
 
 export function getSiteConfig(locale: Locale): SiteConfig {
-  return siteConfigBase[locale] || siteConfigBase.en;
+  return {
+    ...baseConfig,
+    name: translations[locale].name,
+    description: translations[locale].description,
+  }
 }
