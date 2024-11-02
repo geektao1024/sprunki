@@ -10,6 +10,7 @@ import { WithContext, VideoGame } from 'schema-dts'
 import { GameDescription } from '@/components/game-description'
 import { GameInstructions } from '@/components/game-instructions'
 import { GameFeatures } from '@/components/game-features'
+import { GameIntro } from '@/components/game-intro'
 
 export default function IndexPage({
   params: { locale },
@@ -148,6 +149,9 @@ export default function IndexPage({
 
           {/* 游戏介绍 */}
           <GameDescription locale={locale as "en" | "zh" | "fr"} />
+          
+          {/* 游戏详细介绍 */}
+          <GameIntro locale={locale as "en" | "zh" | "fr"} />
           
           {/* 游戏玩法说明 */}
           <GameInstructions locale={locale as "en" | "zh" | "fr"} />
