@@ -44,7 +44,8 @@ export function MainNav({ items, locale }: MainNavProps) {
                     item.disabled && 'cursor-not-allowed opacity-80', // 根据disabled属性添加额外样式
                   )}
                 >
-                  {item.title} // 显示导航项标题
+                  {/* 导航项标题 */}
+                  {item.title}
                 </Link>
               ),
           )}
