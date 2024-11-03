@@ -8,13 +8,15 @@ export function GameDescription({ locale }: GameDescriptionProps) {
   const titles = {
     en: 'Level Devil: Free Puzzle Adventure',
     zh: '恶魔关卡：免费解谜冒险',
-    fr: 'Level Devil : Aventure de Puzzle Gratuite'
+    fr: 'Level Devil : Aventure de Puzzle Gratuite',
+    es: 'Level Devil: Aventura de Puzles Gratuita'
   }
 
   const descriptions = {
-    en: 'Welcome to Level Devil, your destination for free online puzzle thrills! Challenge yourself with Level Devil 2 & 3, packed with tricky traps and hidden surprises. Play seamlessly on PC or mobile without downloads. Collect keys, navigate obstacles, and conquer each devilish level. Join the adventure today and prove your skills!',
-    zh: '欢迎来到恶魔关卡，这里是您免费在线解谜刺激的目的地！挑战自我，体验恶魔关卡 2 & 3，充满巧妙的陷阱和隐藏的惊喜。在电脑或手机上无需下载即可流畅游戏。收集钥匙，穿越障碍，征服每一个魔鬼关卡。今天就加入冒险，证明你的实力！',
-    fr: 'Bienvenue dans Level Devil, votre destination pour des sensations fortes de puzzle en ligne gratuites ! Défiez-vous avec Level Devil 2 & 3, rempli de pièges astucieux et de surprises cachées. Jouez sans problème sur PC ou mobile sans téléchargement. Collectez des clés, naviguez à travers les obstacles et conquérez chaque niveau diabolique. Rejoignez l\'aventure aujourd\'hui et prouvez vos compétences !'
+    en: 'Welcome to Level Devil, your destination...',
+    zh: '欢迎来到恶魔关卡，这里是您免费在线解谜刺激的目的地！...',
+    fr: 'Bienvenue dans Level Devil, votre destination...',
+    es: '¡Bienvenido a Level Devil, tu destino para emocionantes puzles en línea gratuitos! Desafíate con Level Devil 2 y 3, repletos de trampas ingeniosas y sorpresas ocultas. Juega sin problemas en PC o móvil sin necesidad de descargas. Colecciona llaves, navega por obstáculos y conquista cada nivel diabólico. ¡Únete a la aventura hoy y demuestra tus habilidades!'
   }
 
   return (

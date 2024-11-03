@@ -101,6 +101,36 @@ export function GameInstructions({ locale }: GameInstructionsProps) {
         title: 'Acceptez l\'Essai et l\'Erreur',
         content: 'Ne vous laissez pas décourager par les échecs. Utilisez chaque tentative comme une opportunité de vous améliorer et de maîtriser les défis diaboliques de Level Devil.'
       }
+    ],
+    es: [
+      {
+        title: 'Domina los Controles',
+        content: 'Usa WASD o las teclas de flecha para moverte y la barra espaciadora para saltar a través de los desafiantes niveles de Level Devil en PC o móvil.'
+      },
+      {
+        title: 'Anticipa lo Inesperado',
+        content: 'En Level Devil 2 y 3, prepárate para trampas sorpresa y cambios repentinos en el entorno, como plataformas que desaparecen.'
+      },
+      {
+        title: 'Estudia los Niveles',
+        content: 'Tómate un momento para observar el diseño antes de comenzar, identificando obstáculos potenciales o secretos ocultos.'
+      },
+      {
+        title: 'Mejora tu Precisión',
+        content: 'Practica el tiempo y control precisos; estas habilidades son cruciales para evitar trampas y completar saltos difíciles en este juego gratuito de puzzles en línea.'
+      },
+      {
+        title: 'Observa el Entorno',
+        content: 'Presta atención a las pistas en el entorno que podrían indicar caminos secretos o peligros inminentes en esta aventura gratuita.'
+      },
+      {
+        title: 'Adapta tu Estrategia',
+        content: 'Cada nivel presenta desafíos únicos que pueden requerir diferentes enfoques, así que sé flexible con tus tácticas.'
+      },
+      {
+        title: 'Acepta el Proceso',
+        content: 'No te desanimes por los fracasos. Usa cada intento como una oportunidad para mejorar y dominar los desafíos diabólicos de Level Devil.'
+      }
     ]
   }
 
@@ -108,11 +138,11 @@ export function GameInstructions({ locale }: GameInstructionsProps) {
     <div className="mx-auto w-full max-w-[1200px]">
       <div className="rounded-lg border bg-card p-6 shadow-lg">
         <h2 className="mb-6 text-2xl font-bold tracking-tight sm:text-3xl">
-          {titles[locale]}
+          {titles[locale as keyof typeof titles]}
         </h2>
         <div className="grid gap-6 sm:grid-cols-2">
-          {instructions[locale].map((instruction, index) => (
-            <div key={index} className="space-y-2">
+          {instructions[locale as keyof typeof instructions].map((instruction, index) => (
+            <div key={`instruction-${index}`} className="space-y-2">
               <h3 className="flex items-center gap-2 text-lg font-semibold text-primary">
                 <span className="flex h-2 w-2 rounded-full bg-primary" />
                 {instruction.title}

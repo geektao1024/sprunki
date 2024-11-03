@@ -32,6 +32,10 @@ const translations = {
     name: 'Level Devil',
     description: 'Un modèle de développement frontal moderne',
   },
+  es: {
+    name: 'Level Devil',
+    description: 'Una plantilla moderna de desarrollo front-end',
+  },
 }
 
 export function getSiteConfig(locale: Locale): SiteConfig {

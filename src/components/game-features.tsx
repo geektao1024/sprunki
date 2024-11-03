@@ -101,6 +101,36 @@ export function GameFeatures({ locale }: GameFeaturesProps) {
         title: 'Jeu sur Navigateur',
         content: 'Profitez de Level Devil directement dans votre navigateur sans téléchargement, le rendant facilement accessible à tous.'
       }
+    ],
+    es: [
+      {
+        title: 'Desafíos Impredecibles',
+        content: 'Experimenta emocionantes sorpresas con características como techos que se derrumban, picos móviles y suelos que desaparecen, manteniendo a los jugadores siempre alerta.'
+      },
+      {
+        title: 'Diseño de Niveles Dinámico',
+        content: 'Cada nivel presenta desafíos únicos que requieren flexibilidad y planificación estratégica para tener éxito.'
+      },
+      {
+        title: 'Alto Nivel de Dificultad',
+        content: 'Pon a prueba tus reflejos, paciencia y pensamiento estratégico mientras te enfrentas a los difíciles obstáculos y complejos puzzles del juego.'
+      },
+      {
+        title: 'Aprende de los Fracasos',
+        content: 'Considera cada revés como una oportunidad para mejorar. Perfecciona tus tácticas y domina el juego con perseverancia.'
+      },
+      {
+        title: 'Participación Comunitaria',
+        content: 'Únete a una comunidad dedicada de jugadores donde los testimonios destacan la emoción y satisfacción de superar los desafíos del juego.'
+      },
+      {
+        title: 'Prueba de Estrategia y Paciencia',
+        content: 'El éxito requiere no solo reflejos rápidos, sino también pensamiento estratégico y resistencia para enfrentar los niveles desafiantes del juego.'
+      },
+      {
+        title: 'Juego en Navegador',
+        content: 'Disfruta de Level Devil directamente en tu navegador sin necesidad de descargas, haciéndolo fácilmente accesible para todos.'
+      }
     ]
   }
 
@@ -108,11 +138,11 @@ export function GameFeatures({ locale }: GameFeaturesProps) {
     <div className="mx-auto w-full max-w-[1200px]">
       <div className="rounded-lg border bg-card p-6 shadow-lg">
         <h2 className="mb-6 text-2xl font-bold tracking-tight sm:text-3xl">
-          {titles[locale]}
+          {titles[locale as keyof typeof titles]}
         </h2>
         <div className="grid gap-6 sm:grid-cols-2">
-          {features[locale].map((feature, index) => (
-            <div key={index} className="space-y-2">
+          {features[locale as keyof typeof features].map((feature, index) => (
+            <div key={`feature-${index}`} className="space-y-2">
               <h3 className="flex items-center gap-2 text-lg font-semibold text-primary">
                 <span className="flex h-2 w-2 rounded-full bg-primary" />
                 {feature.title}

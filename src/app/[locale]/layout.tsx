@@ -27,13 +27,15 @@ export async function generateMetadata({
   const titles = {
     en: 'Level Devil - Free Online Games | Play Level Devil 2 & 3',
     zh: '恶魔关卡 - 免费在线游戏 | 畅玩恶魔关卡 2 & 3',
-    fr: 'Level Devil - Jeux en Ligne Gratuits | Jouez à Level Devil 2 & 3'
+    fr: 'Level Devil - Jeux en Ligne Gratuits | Jouez à Level Devil 2 & 3',
+    es: 'Level Devil - Juegos en Línea Gratis | Juega Level Devil 2 & 3',
   }
   
   const descriptions = {
     en: 'Level Devil, free online puzzle game! Tackle challenging levels with traps and surprises. Play Level Devil 2 & 3 on PC or mobile, no downloads needed.',
     zh: '恶魔关卡，免费在线解谜游戏！挑战充满陷阱和惊喜的关卡。在电脑或手机上畅玩恶魔关卡 2 & 3，无需下载。',
-    fr: 'Level Devil, jeu de puzzle en ligne gratuit ! Relevez des défis avec pièges et surprises. Jouez à Level Devil 2 & 3 sur PC ou mobile, sans téléchargement.'
+    fr: 'Level Devil, jeu de puzzle en ligne gratuit ! Relevez des défis avec pièges et surprises. Jouez à Level Devil 2 & 3 sur PC ou mobile, sans téléchargement.',
+    es: '¡Level Devil, juego de puzzle en línea gratuito! Enfrenta niveles desafiantes con trampas y sorpresas. Juega Level Devil 2 & 3 en PC o móvil, sin necesidad de descargas.',
   }
 
   return {
@@ -49,6 +51,7 @@ export async function generateMetadata({
         'en': '/en',
         'zh': '/zh',
         'fr': '/fr',
+        'es': '/es',
       },
     },
     openGraph: {
