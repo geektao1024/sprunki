@@ -40,10 +40,10 @@ export async function generateMetadata({
 
   return {
     title: {
-      default: titles[locale],
+      default: titles[locale as keyof typeof titles],
       template: `%s | ${siteConfig.name}`,
     },
-    description: descriptions[locale],
+    description: descriptions[locale as keyof typeof descriptions],
     metadataBase: new URL('https://leveldevil.club'),
     alternates: {
       canonical: `https://leveldevil.club/${locale}`,
@@ -57,8 +57,8 @@ export async function generateMetadata({
     openGraph: {
       type: 'website',
       url: `https://leveldevil.club/${locale}`,
-      title: titles[locale],
-      description: descriptions[locale],
+      title: titles[locale as keyof typeof titles],
+      description: descriptions[locale as keyof typeof descriptions],
       siteName: siteConfig.name,
       images: [
         {
@@ -71,8 +71,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: titles[locale],
-      description: descriptions[locale],
+      title: titles[locale as keyof typeof titles],
+      description: descriptions[locale as keyof typeof descriptions], 
       images: ['/images/og-image.png'],
     },
     icons: {

@@ -14,27 +14,31 @@ interface SiteConfig {
 const baseConfig: Omit<SiteConfig, 'name' | 'description'> = {
   mainNav: [],
   links: {
-    docs: 'https://ui.shadcn.com',
-    github: 'https://github.com/shadcn/ui',
+    docs: 'https://leveldevil.club',
+    github: 'https://leveldevil.club',
   },
 }
 
 const translations = {
   en: {
     name: 'Level Devil',
-    description: 'A modern front-end development template',
+    description: 'Level Devil, free online puzzle game! Tackle challenging levels with traps and surprises.',
   },
   zh: {
     name: '恶魔关卡',
-    description: '这是一个现代化的前端开发模板',
+    description: '恶魔关卡，免费在线解谜游戏！挑战充满陷阱和惊喜的关卡。',
   },
   fr: {
     name: 'Level Devil',
-    description: 'Un modèle de développement frontal moderne',
+    description: 'Level Devil, jeu de puzzle en ligne gratuit ! Relevez des défis avec pièges et surprises.',
   },
   es: {
     name: 'Level Devil',
-    description: 'Una plantilla moderna de desarrollo front-end',
+    description: 'Level Devil, ¡juego de puzles en línea gratis! Supera niveles desafiantes con trampas y sorpresas.',
+  },
+  ja: {
+    name: 'レベルデビル',
+    description: 'レベルデビル、無料オンラインパズルゲーム！罠とサプライズに満ちた挑戦的なレベルに挑戦。',
   },
 }
 

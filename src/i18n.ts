@@ -2,12 +2,13 @@ import { notFound } from 'next/navigation'
 import { getRequestConfig } from 'next-intl/server'
 
 // 确保语言代码正确
-export const locales = ['en', 'zh', 'fr', 'es'] as const
+export const locales = ['en', 'zh', 'fr', 'es', 'ja'] as const
 export const languageNames = {
   en: 'English',
   zh: '中文',
   fr: 'Français',
   es: 'Español',
+  ja: '日本語',
 } as const
 
 export type Locale = (typeof locales)[number]

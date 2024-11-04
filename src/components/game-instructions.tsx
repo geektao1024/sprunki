@@ -8,7 +8,9 @@ export function GameInstructions({ locale }: GameInstructionsProps) {
   const titles = {
     en: 'How to Play Level Devil',
     zh: '如何玩恶魔关卡',
-    fr: 'Comment Jouer à Level Devil'
+    fr: 'Comment Jouer à Level Devil',
+    es: 'Cómo jugar a Level Devil',
+    ja: 'レベルデビルの遊び方'
   }
 
   const instructions = {
@@ -130,6 +132,36 @@ export function GameInstructions({ locale }: GameInstructionsProps) {
       {
         title: 'Acepta el Proceso',
         content: 'No te desanimes por los fracasos. Usa cada intento como una oportunidad para mejorar y dominar los desafíos diabólicos de Level Devil.'
+      }
+    ],
+    ja: [
+      {
+        title: 'コントロールをマスター',
+        content: 'PCやモバイルでWASDキーまたは矢印キーで移動し、スペースバーでジャンプして、レベルデビルの挑戦的なレベルを攻略しましょう。'
+      },
+      {
+        title: '予期せぬ展開に備える',
+        content: 'レベルデビル2と3では、消える足場など、予期せぬ罠や環境の突然の変化に備えましょう。'
+      },
+      {
+        title: 'レベルを研究',
+        content: '開始前に、レイアウトをよく観察し、潜在的な障害物や隠されたヒントを見つけましょう。'
+      },
+      {
+        title: '精密さを磨く',
+        content: '正確なタイミングとコントロールを練習しましょう。これらのスキルは、罠を避け、難しいジャンプを成功させるために重要です。'
+      },
+      {
+        title: '環境を観察',
+        content: '隠された道や迫り来る危険を示す環境のヒントに注意を払いましょう。'
+      },
+      {
+        title: '戦略を適応させる',
+        content: '各レベルには独自の課題があり、異なるアプローチが必要かもしれません。柔軟に戦術を変更しましょう。'
+      },
+      {
+        title: '試行錯誤を受け入れる',
+        content: '失敗にくじけないでください。各挑戦を、レベルデビルの悪魔的な課題をマスターする機会として活用しましょう。'
       }
     ]
   }

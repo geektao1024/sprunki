@@ -8,7 +8,8 @@ export function GameFeatures({ locale }: GameFeaturesProps) {
   const titles = {
     en: 'Game Features of Level Devil',
     zh: '恶魔关卡游戏特点',
-    fr: 'Caractéristiques du Jeu Level Devil'
+    fr: 'Caractéristiques du Jeu Level Devil',
+    ja: 'レベルデビルのゲーム特徴'
   }
 
   const features = {
@@ -130,6 +131,36 @@ export function GameFeatures({ locale }: GameFeaturesProps) {
       {
         title: 'Juego en Navegador',
         content: 'Disfruta de Level Devil directamente en tu navegador sin necesidad de descargas, haciéndolo fácilmente accesible para todos.'
+      }
+    ],
+    ja: [
+      {
+        title: '予測不可能な挑戦',
+        content: '崩れる天井、動くスパイク、消える床など、プレイヤーを常に緊張させるスリリングな要素を体験できます。'
+      },
+      {
+        title: 'ダイナミックなレベルデザイン',
+        content: '各レベルには独自の課題があり、成功するには柔軟性と戦略的な計画が必要です。'
+      },
+      {
+        title: '高難度レベル',
+        content: '複雑なパズルや困難な障害物に立ち向かい、反射神経、忍耐力、戦略的思考が試されます。'
+      },
+      {
+        title: '失敗からの学び',
+        content: '各挫折を成長の機会として受け入れ、粘り強く戦術を磨いてゲームをマスターしましょう。'
+      },
+      {
+        title: 'コミュニティ参加',
+        content: '熱心なプレイヤーコミュニティに参加し、ゲームの課題を克服する興奮と満足感を共有しましょう。'
+      },
+      {
+        title: '戦略と忍耐の試練',
+        content: '成功には素早い反射神経だけでなく、戦略的思考と要求の厳しいレベルに対する冷静なアプローチが必要です。'
+      },
+      {
+        title: 'ブラウザベースのプレイ',
+        content: 'ダウンロード不要でブラウザから直接レベルデビルを楽しめ、誰でも簡単にアクセスできます。'
       }
     ]
   }
