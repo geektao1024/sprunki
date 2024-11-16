@@ -29,6 +29,10 @@ export default function middleware(request: NextRequest) {
     'Cache-Control',
     'public, max-age=3600, must-revalidate'
   )
+  // 添加更多国际化和 SEO 相关 headers
+  const locale = request.nextUrl.pathname.split('/')[1] || defaultLocale
+  response.headers.set('Content-Language', locale)
+  response.headers.set('X-Content-Language', locale)
 
   return response
 }

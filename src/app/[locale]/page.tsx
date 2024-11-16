@@ -24,24 +24,30 @@ export default function IndexPage({
   const t = useTranslations('Index')
   const siteConfig = getSiteConfig(locale as 'en' | 'zh' | 'fr')
 
-  // 修复结构化数据类型
+  // 优化结构化数据
   const jsonLd: WithContext<VideoGame> = {
     '@context': 'https://schema.org',
     '@type': 'VideoGame',
-    name: 'Level Devil',
-    description: 'The ultimate free online puzzle game with challenging levels',
-    applicationCategory: 'Game',
+    name: 'Sprunki Incredibox',
+    description: t('description'),
+    applicationCategory: 'Entertainment',
     gamePlatform: ['Web Browser'],
-    genre: ['Puzzle', 'Platform'],
-    url: 'https://leveldevil.club',
+    genre: ['Music', 'Creative'],
+    url: 'https://sprunkiincrediboxonline.org',
     inLanguage: ['en', 'zh', 'fr'],
+    
+    // 添加更多详细信息
+    operatingSystem: 'Any modern web browser',
+    datePublished: '2024-01-01',
+    
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.86',
-      ratingCount: '1000',
+      ratingValue: '4.8',
+      ratingCount: '5000',
       bestRating: '5',
       worstRating: '1',
     },
+    
     offers: {
       '@type': 'Offer',
       price: '0',

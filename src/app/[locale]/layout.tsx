@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Locale, locales } from '@/i18n'
 import { unstable_setRequestLocale } from 'next-intl/server'
+import Script from 'next/script'
 
 import { getSiteConfig } from '@/config/site-i18n'
 import { fontSans } from '@/lib/fonts'
@@ -88,10 +89,25 @@ export async function generateMetadata({
       'music remix',
       'creative music game',
       'fan-made music game',
+      'online music game',
+      'incredibox mod',
+      'music creation platform',
+      'interactive music experience'
     ],
     other: {
       'Cache-Control': 'public, max-age=3600, must-revalidate',
       'X-DNS-Prefetch-Control': 'on',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   }
 }
@@ -126,6 +142,11 @@ export default function RootLayout({
           rel="apple-touch-icon"
           sizes="180x180"
           href="/favicon/apple-touch-icon.png"
+        />
+        <Script
+          defer
+          data-domain="sprunkiincrediboxonline.org"
+          src="https://plausible.io/js/script.js"
         />
       </head>
       <body
