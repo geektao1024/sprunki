@@ -1,115 +1,86 @@
-# next-shadcn-intl-template
+# Sprunki Incredibox Online
 
-This is a [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [ShadcnUI](https://ui.shadcn.com/), [NextIntl](https://next-intl-docs.vercel.app/) starter website template. It comes pre-configured with basic i18n, shadcn ui configuration.
+这是一个基于 [Next.js](https://nextjs.org/)、[Tailwind CSS](https://tailwindcss.com/)、[ShadcnUI](https://ui.shadcn.com/) 和 [NextIntl](https://next-intl-docs.vercel.app/) 的在线音乐游戏平台。
 
-## Motivation
+## 项目动机
 
-I noticed there are certain default configuration that I tend to reuse across different projects both at my professional work and personal world. These default configs usually takes a couple of hours to bootstrap and/ or copy paste from previous projects, thus it made sense to have a template preconfigured with them. I wanted to have a template which will allow me to clone and immediately start building new features.
+Sprunki Incredibox 是一个创新的在线音乐游戏平台，致力于为用户提供独特、有趣的音乐创作体验。我们的目标是让每个人都能轻松地创作和分享音乐。
 
-## Features
+## 特性
 
-- Next.js with Typescript
-- Easy styling customization with Tailwind 3.0
-- Sane default for all common UI components with ShadCN UI
-- Automatic locale detection and internationalization with `next-intl`
-- Auto class sorting with [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
-- Code formatting with husky pre-commit hook
+- 多语言支持（中文、英文、法语、西班牙语、日语）
+- 响应式设计，支持多设备访问
+- 丰富的游戏模式和角色
+- 社交分享功能
+- 快速加载和流畅的用户体验
 
-## Example Website
+## 技术栈
 
-Check out this [barcode-maker.com](https://barcode-maker.com/) built using this template!
+- Next.js 14+ with App Router
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
+- next-intl 国际化
+- 响应式设计
+- 社交媒体分享集成
 
-## Quick Start Guide
+## 快速开始
 
 ```bash
-npx create-next-app -e https://github.com/LeonZeng919/next-shadcn-intl-template
+# 克隆项目
+git clone https://github.com/your-username/sprunki-incredibox.git
+
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+访问 [http://localhost:3000](http://localhost:3000) 查看应用。
 
-You can start editing the page by modifying `app/[locale]/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Project Structure
+## 项目结构
 
 ```bash
 .
-├── LICENSE
-├── README.md
-├── components.json --> shadcn components config
-├── messages    --> i18n messages
+├── public/                # 静态资源
+│   └── images/            # 游戏图片和资源
+├── src/
+│   ├── app/               # 路由和页面
+│   ├── components/        # 可复用组件
+│   │   ├── game-window.tsx
+│   │   ├── game-list.tsx
+│   │   └── ui/            # Shadcn UI 组件
+│   ├── lib/               # 工具函数
+│   ├── styles/            # 全局样式
+│   └── types/             # TypeScript 类型定义
+├── messages/              # 国际化语言文件
 │   ├── en.json
-│   ├── fr.json
-│   └── zh.json
-├── next-env.d.ts
-├── next.config.mjs
-├── package-lock.json
-├── package.json
-├── postcss.config.js
-├── public
-│   ├── next.svg
-│   └── vercel.svg
-├── src
-│   ├── app
-│   │   ├── [locale]
-│   │   │   ├── layout.tsx
-│   │   │   └── page.tsx
-│   │   ├── error.tsx
-│   │   ├── layout.tsx
-│   │   └── not-found.tsx
-│   ├── components
-│   │   ├── icons.tsx
-│   │   ├── language-toggle.tsx
-│   │   ├── main-nav.tsx
-│   │   ├── site-header.tsx
-│   │   ├── tailwind-indicator.tsx
-│   │   ├── theme-provider.tsx
-│   │   ├── theme-toggle.tsx
-│   │   └── ui  --> components installed from shadcn
-│   │       ├── button.tsx
-│   │       ├── dropdown-menu.tsx
-│   │       └── select.tsx
-│   ├── config
-│   │   └── site-i18n.ts
-│   ├── i18n.ts  --> i18n configs
-│   ├── lib
-│   │   ├── fonts.ts
-│   │   └── utils.ts
-│   ├── middleware.ts   --> i18n middleware
-│   ├── navigation.ts   --> i18n navigation components exports (ex: Link, useParams, ...etc)
-│   ├── styles
-│   │   └── globals.css  --> ui components color configs
-│   └── types
-│       └── nav.ts
-├── tailwind.config.ts
-├── tsconfig.json
-└── yarn.lock
+│   ├── zh.json
+│   └── ...
 ```
 
-## Customize
+## 国际化
 
-- `components.json` contains configuration for shadcn ui components, update this to your liking before installing new ui components from shadcn, you may have to reinstall the button component as well.
-- `i18n.ts` contains configuration for `next-intl`, update settings available here such as `defaultLocale`, `locales` supported, and `localePrefix` strategy to your liking.
-- `middleware.ts` contains middleware function created by `next-intl` for automatic locale detection and route matching.
-- `navigation.ts` contains exports for i18n supported navigation components. By default it is configured with `prefix: always` and `sharedPathname` strategy. Visit [next-intl documentation](https://next-intl-docs.vercel.app/) for more information.
+项目支持多语言，语言文件位于 `messages/` 目录。目前支持：
+- 🇺🇸 英语
+- 🇨🇳 中文
+- 🇫🇷 法语
+- 🇪🇸 西班牙语
+- 🇯🇵 日语
 
-## Learn More
+## 部署
 
-To learn more about Next.js, take a look at the following resources:
+[![Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/sprunki-incredibox)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 贡献
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+欢迎提交 PR 和 Issue！请阅读 CONTRIBUTING.md 了解详情。
 
-## Deploy on Vercel
+## 许可证
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[MIT License](LICENSE)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 致谢
 
-## License
-
-[MIT](https://github.com/duy-the-developer/nextjs-tailwind-shadcn-i18n-template/blob/production/LICENSE)
-# sprunki
+感谢 Incredibox 原作者和所有为项目做出贡献的开发者和音乐爱好者。
