@@ -125,6 +125,8 @@ export default function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        <meta name="msvalidate.01" content="A6C0A43795DDC80BDC982CE017D38B8B" />
+        
         <link rel="icon" href="/favicon/favicon.ico" />
         <link
           rel="icon"
