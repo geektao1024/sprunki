@@ -1,10 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import { Loader2 } from 'lucide-react'
+import { Loader2, Maximize2 } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 interface GameWindowProps {
   locale: string
@@ -49,6 +50,7 @@ export function GameWindow({ locale }: GameWindowProps) {
   const [currentGameUrl, setCurrentGameUrl] = useState(
     'https://iframegame.com/embed/incredibox-sprunki/index.html',
   )
+  const gameWindowRef = useRef<HTMLDivElement>(null)
 
   const titles = {
     en: 'Sprunki Incredibox: Music Game | Create, Mod & Play Online',
@@ -82,6 +84,19 @@ export function GameWindow({ locale }: GameWindowProps) {
     }
   }
 
+  // 处理全屏
+  const handleFullscreen = () => {
+    if (!gameWindowRef.current) return
+    
+    if (!document.fullscreenElement) {
+      gameWindowRef.current.requestFullscreen().catch((err) => {
+        console.error(`Error attempting to enable fullscreen: ${err.message}`)
+      })
+    } else {
+      document.exitFullscreen()
+    }
+  }
+
   return (
     <>
       {/* 全屏加载动画 */}
@@ -107,7 +122,10 @@ export function GameWindow({ locale }: GameWindowProps) {
       <div className="flex gap-4">
         <div className="flex flex-col gap-4">
           {/* 游戏主窗口 */}
-          <div className="relative h-[600px] w-[800px] overflow-hidden rounded-lg border bg-card shadow-lg">
+          <div 
+            ref={gameWindowRef}
+            className="relative h-[600px] w-[800px] overflow-hidden rounded-lg border bg-card shadow-lg"
+          >
             {!isGameLoaded ? (
               <div className="absolute bottom-0 left-0 right-0 top-0 flex flex-col items-center justify-center bg-gradient-to-br from-cyan-500/30 via-green-500/30 to-orange-500/30 backdrop-blur-xl">
                 {/* 增强渐变背景动画效果 */}
@@ -183,6 +201,15 @@ export function GameWindow({ locale }: GameWindowProps) {
                     margin: '0 auto',
                   }}
                 />
+                {/* 全屏按钮 */}
+                <Button
+                  variant="secondary"
+                  className="absolute bottom-4 right-4 z-10 flex items-center gap-2 rounded-md bg-zinc-700/90 px-4 py-2 text-sm font-medium text-white shadow-md backdrop-blur-sm transition-colors hover:bg-zinc-700/95"
+                  onClick={handleFullscreen}
+                >
+                  <Maximize2 className="h-4 w-4" />
+                  <span>Fullscreen</span>
+                </Button>
               </div>
             )}
           </div>
