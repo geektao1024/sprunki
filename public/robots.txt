@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Primary domain declaration
+Host: https://sprunkiincrediboxonline.org
+
+# Sitemap location
+Sitemap: https://sprunkiincrediboxonline.org/sitemap.xml
+
+# SEO Optimization for Sprunki Incredibox
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/

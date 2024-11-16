@@ -6,173 +6,190 @@ interface GameFeaturesProps {
 
 export function GameFeatures({ locale }: GameFeaturesProps) {
   const titles = {
-    en: 'Game Features of Level Devil',
-    zh: '恶魔关卡游戏特点',
-    fr: 'Caractéristiques du Jeu Level Devil',
-    ja: 'レベルデビルのゲーム特徴'
+    en: 'Sprunki Incredibox Game Features',
+    zh: 'Sprunki Incredibox 游戏特色',
+    fr: 'Fonctionnalités de Sprunki Incredibox',
+    es: 'Características de Sprunki Incredibox',
+    ja: 'Sprunki Incredibox ゲームの特徴',
+  }
+
+  const subtitles = {
+    en: 'Explore the amazing features that make Sprunki Incredibox a must-play game!',
+    zh: '探索让 Sprunki Incredibox 成为必玩游戏的精彩特色！',
+    fr: 'Découvrez les fonctionnalités incroyables qui font de Sprunki Incredibox un jeu incontournable !',
+    es: '¡Explora las increíbles características que hacen de Sprunki Incredibox un juego imprescindible!',
+    ja: 'Sprunki Incredibox を必須プレイにする素晴らしい特徴をご覧ください！',
   }
 
   const features = {
     en: [
       {
-        title: 'Unpredictable Challenges',
-        content: 'Experience thrilling surprises with features like crumbling ceilings, moving spikes, and disappearing floors that keep players on their toes.'
+        title: 'Unique Soundscapes',
+        content:
+          'Offers a variety of quirky sounds and samples, allowing players to create one-of-a-kind musical compositions.',
       },
       {
-        title: 'Dynamic Level Design',
-        content: 'Each level presents unique challenges requiring flexibility and strategic planning to navigate successfully.'
+        title: 'Quirky and Lovable Characters',
+        content:
+          'Features a diverse cast of characters, from robots to yetis, each adding their unique flavor to the music creation process.',
       },
       {
-        title: 'High Difficulty Level',
-        content: 'Test your reflexes, patience, and strategic thinking as you tackle the game\'s tough obstacles and intricate puzzles.'
+        title: 'Vibrant Visuals',
+        content:
+          'Immerses players in a colorful, animated world that enhances the overall visual experience.',
       },
       {
-        title: 'Learning From Failure',
-        content: 'Embrace each setback as an opportunity to improve. Hone your tactics and master the game with perseverance.'
+        title: 'Intuitive Drag-and-Drop Interface',
+        content:
+          'Easy-to-use interface that enables anyone to start creating music effortlessly.',
       },
       {
-        title: 'Community Engagement',
-        content: 'Join a dedicated player community where testimonials highlight the excitement and satisfaction of overcoming the game\'s challenges.'
+        title: 'Zany Effects and Transitions',
+        content:
+          'Adds unique sound effects and transitions, enriching the depth and fun of musical creations.',
       },
       {
-        title: 'Strategy and Patience Test',
-        content: 'Success requires not just quick reflexes, but also strategic thinking, endurance, and a calm approach to the game\'s demanding levels.'
+        title: 'Community Sharing and Interaction',
+        content:
+          'Allows players to easily share their musical creations and engage with other players for inspiration and collaboration.',
       },
-      {
-        title: 'Browser-Based Play',
-        content: 'Enjoy Level Devil online directly in your browser without needing to download, making it easily accessible for everyone.'
-      }
     ],
     zh: [
       {
-        title: '不可预测的挑战',
-        content: '体验令人兴奋的惊喜，如崩塌的天花板、移动的尖刺和消失的地板，让玩家时刻保持警惕。'
+        title: '独特音景',
+        content: '提供各种独特的声音和采样，让玩家创作独一无二的音乐作品。',
       },
       {
-        title: '动态关卡设计',
-        content: '每个关卡都呈现独特的挑战，需要灵活性和战略规划才能成功通过。'
+        title: '古怪可爱的角色',
+        content:
+          '拥有多样化的角色阵容，从机器人到雪人，每个角色都为音乐创作过程增添独特风味。',
       },
       {
-        title: '高难度等级',
-        content: '在应对游戏的艰难障碍和复杂谜题时，测试你的反应能力、耐心和战略思维。'
+        title: '生动的视觉效果',
+        content: '让玩家沉浸在色彩缤纷的动画世界中，提升整体视觉体验。',
       },
       {
-        title: '从失败中学习',
-        content: '将每次挫折视为提升的机会。通过坚持不懈来磨练你的策略并掌握游戏。'
+        title: '直观的拖放界面',
+        content: '简单易用的界面，让任何人都能轻松开始创作音乐。',
       },
       {
-        title: '社区参与',
-        content: '加入专注的玩家社区，玩家的评价突显了克服游戏挑战的兴奋和满足感。'
+        title: '有趣的效果和转场',
+        content: '添加独特的音效和转场，丰富音乐创作的深度和乐趣。',
       },
       {
-        title: '策略和耐心的考验',
-        content: '成功不仅需要快速的反应，还需要战略思维、耐力和冷静面对游戏具有挑战性的关卡。'
+        title: '社区分享与互动',
+        content:
+          '让玩家轻松分享他们的音乐创作，并与其他玩家互动以获得灵感和合作机会。',
       },
-      {
-        title: '浏览器游戏',
-        content: '直接在浏览器中享受恶魔关卡，无需下载，让每个人都能轻松访问。'
-      }
     ],
     fr: [
       {
-        title: 'Défis Imprévisibles',
-        content: 'Découvrez des surprises palpitantes avec des fonctionnalités comme des plafonds qui s\'effondrent, des piques mobiles et des sols qui disparaissent.'
+        title: 'Paysages Sonores Uniques',
+        content:
+          "Propose une variété de sons et d'échantillons originaux, permettant aux joueurs de créer des compositions musicales uniques.",
       },
       {
-        title: 'Design de Niveau Dynamique',
-        content: 'Chaque niveau présente des défis uniques nécessitant flexibilité et planification stratégique pour réussir.'
+        title: 'Personnages Attachants',
+        content:
+          'Présente une distribution variée de personnages, des robots aux yétis, chacun apportant sa touche unique au processus de création musicale.',
       },
       {
-        title: 'Niveau de Difficulté Élevé',
-        content: 'Testez vos réflexes, votre patience et votre réflexion stratégique face aux obstacles difficiles et aux énigmes complexes du jeu.'
+        title: 'Visuels Vibrants',
+        content:
+          "Immerge les joueurs dans un monde coloré et animé qui améliore l'expérience visuelle globale.",
       },
       {
-        title: 'Apprendre de l\'Échec',
-        content: 'Considérez chaque revers comme une opportunité de vous améliorer. Affinez vos tactiques et maîtrisez le jeu avec persévérance.'
+        title: 'Interface Glisser-Déposer Intuitive',
+        content:
+          'Interface facile à utiliser permettant à chacun de commencer à créer de la musique sans effort.',
       },
       {
-        title: 'Engagement Communautaire',
-        content: 'Rejoignez une communauté de joueurs dédiée où les témoignages soulignent l\'excitation et la satisfaction de surmonter les défis du jeu.'
+        title: 'Effets et Transitions Originaux',
+        content:
+          'Ajoute des effets sonores et des transitions uniques, enrichissant la profondeur et le plaisir des créations musicales.',
       },
       {
-        title: 'Test de Stratégie et de Patience',
-        content: 'La réussite nécessite non seulement des réflexes rapides, mais aussi une réflexion stratégique et une approche calme des niveaux exigeants.'
+        title: 'Partage et Interaction Communautaire',
+        content:
+          "Permet aux joueurs de partager facilement leurs créations musicales et d'interagir avec d'autres joueurs pour s'inspirer et collaborer.",
       },
-      {
-        title: 'Jeu sur Navigateur',
-        content: 'Profitez de Level Devil directement dans votre navigateur sans téléchargement, le rendant facilement accessible à tous.'
-      }
     ],
     es: [
       {
-        title: 'Desafíos Impredecibles',
-        content: 'Experimenta emocionantes sorpresas con características como techos que se derrumban, picos móviles y suelos que desaparecen, manteniendo a los jugadores siempre alerta.'
+        title: 'Paisajes Sonoros Únicos',
+        content:
+          'Ofrece una variedad de sonidos y muestras peculiares, permitiendo a los jugadores crear composiciones musicales únicas.',
       },
       {
-        title: 'Diseño de Niveles Dinámico',
-        content: 'Cada nivel presenta desafíos únicos que requieren flexibilidad y planificación estratégica para tener éxito.'
+        title: 'Personajes Peculiares y Adorables',
+        content:
+          'Presenta un elenco diverso de personajes, desde robots hasta yetis, cada uno aportando su sabor único al proceso de creación musical.',
       },
       {
-        title: 'Alto Nivel de Dificultad',
-        content: 'Pon a prueba tus reflejos, paciencia y pensamiento estratégico mientras te enfrentas a los difíciles obstáculos y complejos puzzles del juego.'
+        title: 'Visuales Vibrantes',
+        content:
+          'Sumerge a los jugadores en un mundo colorido y animado que mejora la experiencia visual general.',
       },
       {
-        title: 'Aprende de los Fracasos',
-        content: 'Considera cada revés como una oportunidad para mejorar. Perfecciona tus tácticas y domina el juego con perseverancia.'
+        title: 'Interfaz Intuitiva de Arrastrar y Soltar',
+        content:
+          'Interfaz fácil de usar que permite a cualquiera comenzar a crear música sin esfuerzo.',
       },
       {
-        title: 'Participación Comunitaria',
-        content: 'Únete a una comunidad dedicada de jugadores donde los testimonios destacan la emoción y satisfacción de superar los desafíos del juego.'
+        title: 'Efectos y Transiciones Divertidos',
+        content:
+          'Añade efectos de sonido y transiciones únicas, enriqueciendo la profundidad y diversión de las creaciones musicales.',
       },
       {
-        title: 'Prueba de Estrategia y Paciencia',
-        content: 'El éxito requiere no solo reflejos rápidos, sino también pensamiento estratégico y resistencia para enfrentar los niveles desafiantes del juego.'
+        title: 'Compartir e Interactuar en Comunidad',
+        content:
+          'Permite a los jugadores compartir fácilmente sus creaciones musicales e interactuar con otros jugadores para inspirarse y colaborar.',
       },
-      {
-        title: 'Juego en Navegador',
-        content: 'Disfruta de Level Devil directamente en tu navegador sin necesidad de descargas, haciéndolo fácilmente accesible para todos.'
-      }
     ],
     ja: [
       {
-        title: '予測不可能な挑戦',
-        content: '崩れる天井、動くスパイク、消える床など、プレイヤーを常に緊張させるスリリングな要素を体験できます。'
+        title: 'ユニークなサウンドスケープ',
+        content:
+          '個性的なサウンドとサンプルを多数提供し、プレイヤーが独自の音楽作品を作れます。',
       },
       {
-        title: 'ダイナミックなレベルデザイン',
-        content: '各レベルには独自の課題があり、成功するには柔軟性と戦略的な計画が必要です。'
+        title: '個性的で愛らしいキャラクター',
+        content:
+          'ロボットからイエティまで、多様なキャラクターが音楽制作に独自の味わいを加えます。',
       },
       {
-        title: '高難度レベル',
-        content: '複雑なパズルや困難な障害物に立ち向かい、反射神経、忍耐力、戦略的思考が試されます。'
+        title: '鮮やかなビジュアル',
+        content:
+          'カラフルでアニメーションのある世界にプレイヤーを没入させ、視覚体験を向上させます。',
       },
       {
-        title: '失敗からの学び',
-        content: '各挫折を成長の機会として受け入れ、粘り強く戦術を磨いてゲームをマスターしましょう。'
+        title: '直感的なドラッグ＆ドロップ操作',
+        content: '誰でも簡単に音楽制作を始められる使いやすいインターフェース。',
       },
       {
-        title: 'コミュニティ参加',
-        content: '熱心なプレイヤーコミュニティに参加し、ゲームの課題を克服する興奮と満足感を共有しましょう。'
+        title: 'ユニークな効果と転換',
+        content:
+          '独特な音響効果とトランジションを追加し、音楽制作の深みと楽しさを豊かにします。',
       },
       {
-        title: '戦略と忍耐の試練',
-        content: '成功には素早い反射神経だけでなく、戦略的思考と要求の厳しいレベルに対する冷静なアプローチが必要です。'
+        title: 'コミュニティ共有と交流',
+        content:
+          'プレイヤーが音楽作品を簡単に共有し、他のプレイヤーとインスピレーションや協力のために交流できます。',
       },
-      {
-        title: 'ブラウザベースのプレイ',
-        content: 'ダウンロード不要でブラウザから直接レベルデビルを楽しめ、誰でも簡単にアクセスできます。'
-      }
-    ]
+    ],
   }
 
   return (
     <div className="mx-auto w-full max-w-[1200px]">
       <div className="rounded-lg border bg-card p-6 shadow-lg">
-        <h2 className="mb-6 text-2xl font-bold tracking-tight sm:text-3xl">
-          {titles[locale as keyof typeof titles]}
+        <h2 className="mb-2 text-center text-2xl font-bold tracking-tight sm:text-3xl">
+          {titles[locale]}
         </h2>
-        <div className="grid gap-6 sm:grid-cols-2">
-          {features[locale as keyof typeof features].map((feature, index) => (
+        <p className="mb-6 text-center text-muted-foreground">
+          {subtitles[locale]}
+        </p>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {features[locale].map((feature, index) => (
             <div key={`feature-${index}`} className="space-y-2">
               <h3 className="flex items-center gap-2 text-lg font-semibold text-primary">
                 <span className="flex h-2 w-2 rounded-full bg-primary" />
@@ -187,4 +204,4 @@ export function GameFeatures({ locale }: GameFeaturesProps) {
       </div>
     </div>
   )
-} 
+}

@@ -21,24 +21,29 @@ const baseConfig: Omit<SiteConfig, 'name' | 'description'> = {
 
 const translations = {
   en: {
-    name: 'Level Devil',
-    description: 'Level Devil, free online puzzle game! Tackle challenging levels with traps and surprises.',
+    name: 'Sprunki Incredibox',
+    description:
+      'Play Sprunki Incredibox online - A free music creation game where you mix sounds, create beats, and share your musical masterpieces. Join now to unleash your creativity!',
   },
   zh: {
-    name: '恶魔关卡',
-    description: '恶魔关卡，免费在线解谜游戏！挑战充满陷阱和惊喜的关卡。',
+    name: 'Sprunki Incredibox',
+    description:
+      '在线游玩 Sprunki Incredibox - 一款免费音乐创作游戏，让您混音、创作节拍并分享音乐作品。立即加入，释放您的创造力！',
   },
   fr: {
-    name: 'Level Devil',
-    description: 'Level Devil, jeu de puzzle en ligne gratuit ! Relevez des défis avec pièges et surprises.',
+    name: 'Sprunki Incredibox',
+    description:
+      "Jouez à Sprunki Incredibox en ligne - Un jeu gratuit de création musicale où vous mixez des sons, créez des rythmes et partagez vos chefs-d'œuvre musicaux. Rejoignez-nous et libérez votre créativité !",
   },
   es: {
-    name: 'Level Devil',
-    description: 'Level Devil, ¡juego de puzles en línea gratis! Supera niveles desafiantes con trampas y sorpresas.',
+    name: 'Sprunki Incredibox',
+    description:
+      'Juega a Sprunki Incredibox en línea - Un juego gratuito de creación musical donde mezclas sonidos, creas ritmos y compartes tus obras maestras musicales. ¡Únete ahora y libera tu creatividad!',
   },
   ja: {
-    name: 'レベルデビル',
-    description: 'レベルデビル、無料オンラインパズルゲーム！罠とサプライズに満ちた挑戦的なレベルに挑戦。',
+    name: 'Sprunki Incredibox',
+    description:
+      'Sprunki Incredibox をオンラインでプレイ - サウンドをミックスし、ビートを作成し、音楽作品を共有できる無料の音楽創作ゲーム。今すぐ参加して、創造性を解き放とう！',
   },
 }
 

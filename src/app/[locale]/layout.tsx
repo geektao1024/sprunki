@@ -23,20 +23,24 @@ export async function generateMetadata({
   params: { locale },
 }: PageProps): Promise<Metadata> {
   const siteConfig = getSiteConfig(locale)
-  
+
   const titles = {
-    en: 'Level Devil - Free Online Games | Play Level Devil 2 & 3',
-    zh: '恶魔关卡 - 免费在线游戏 | 畅玩恶魔关卡 2 & 3',
-    fr: 'Level Devil - Jeux en Ligne Gratuits | Jouez à Level Devil 2 & 3',
-    es: 'Level Devil - Juegos en Línea Gratis | Juega Level Devil 2 & 3',
+    en: 'Sprunki Incredibox: Music Game | Create & Play Online',
+    zh: 'Sprunki Incredibox：音乐游戏 | 创作与在线游玩',
+    fr: 'Sprunki Incredibox : Jeu Musical | Créez et Jouez en Ligne',
+    es: 'Sprunki Incredibox: Juego Musical | Crea y Juega en Línea',
+    ja: 'Sprunki Incredibox：音楽ゲーム | 創作とオンラインプレイ',
   }
-  
+
   const descriptions = {
-    en: 'Level Devil, free online puzzle game! Tackle challenging levels with traps and surprises. Play Level Devil 2 & 3 on PC or mobile, no downloads needed.',
-    zh: '恶魔关卡，免费在线解谜游戏！挑战充满陷阱和惊喜的关卡。在电脑或手机上畅玩恶魔关卡 2 & 3，无需下载。',
-    fr: 'Level Devil, jeu de puzzle en ligne gratuit ! Relevez des défis avec pièges et surprises. Jouez à Level Devil 2 & 3 sur PC ou mobile, sans téléchargement.',
-    es: '¡Level Devil, juego de puzzle en línea gratuito! Enfrenta niveles desafiantes con trampas y sorpresas. Juega Level Devil 2 & 3 en PC o móvil, sin necesidad de descargas.',
+    en: 'Play Sprunki Incredibox online - A free music creation game where you mix sounds, create beats, and share your musical masterpieces. Join now to unleash your creativity!',
+    zh: '在线游玩 Sprunki Incredibox - 一款免费音乐创作游戏，让您混音、创作节拍并分享音乐作品。立即加入，释放您的创造力！',
+    fr: "Jouez à Sprunki Incredibox en ligne - Un jeu gratuit de création musicale où vous mixez des sons, créez des rythmes et partagez vos chefs-d'œuvre musicaux. Rejoignez-nous et libérez votre créativité !",
+    es: 'Juega a Sprunki Incredibox en línea - Un juego gratuito de creación musical donde mezclas sonidos, creas ritmos y compartes tus obras maestras musicales. ¡Únete ahora y libera tu creatividad!',
+    ja: 'Sprunki Incredibox をオンラインでプレイ - サウンドをミックスし、ビートを作成し、音楽作品を共有できる無料の音楽創作ゲーム。今すぐ参加して、創造性を解き放とう！',
   }
+
+  const canonicalUrl = `https://sprunkiincrediboxonline.org/${locale}`
 
   return {
     title: {
@@ -44,19 +48,20 @@ export async function generateMetadata({
       template: `%s | ${siteConfig.name}`,
     },
     description: descriptions[locale as keyof typeof descriptions],
-    metadataBase: new URL('https://leveldevil.club'),
+    metadataBase: new URL('https://sprunkiincrediboxonline.org'),
     alternates: {
-      canonical: `https://leveldevil.club/${locale}`,
+      canonical: canonicalUrl,
       languages: {
-        'en': '/en',
-        'zh': '/zh',
-        'fr': '/fr',
-        'es': '/es',
+        en: '/en',
+        zh: '/zh',
+        fr: '/fr',
+        es: '/es',
+        ja: '/ja',
       },
     },
     openGraph: {
       type: 'website',
-      url: `https://leveldevil.club/${locale}`,
+      url: `https://sprunkiincrediboxonline.org/${locale}`,
       title: titles[locale as keyof typeof titles],
       description: descriptions[locale as keyof typeof descriptions],
       siteName: siteConfig.name,
@@ -65,50 +70,24 @@ export async function generateMetadata({
           url: '/images/og-image.png',
           width: 1200,
           height: 630,
-          alt: 'Level Devil Game',
+          alt: 'Sprunki Incredibox: Music Game',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
       title: titles[locale as keyof typeof titles],
-      description: descriptions[locale as keyof typeof descriptions], 
+      description: descriptions[locale as keyof typeof descriptions],
       images: ['/images/og-image.png'],
     },
-    icons: {
-      icon: [
-        {
-          rel: 'icon',
-          url: '/favicon/favicon.ico',
-        },
-        {
-          rel: 'icon',
-          type: 'image/png',
-          sizes: '32x32',
-          url: '/favicon/favicon-32x32.png',
-        },
-        {
-          rel: 'icon',
-          type: 'image/png',
-          sizes: '16x16',
-          url: '/favicon/favicon-16x16.png',
-        }
-      ],
-      apple: {
-        rel: 'apple-touch-icon',
-        url: '/favicon/apple-touch-icon.png',
-      },
-      shortcut: { url: '/favicon/favicon.ico' }
-    },
     keywords: [
-      'Level Devil',
-      'puzzle game',
-      'online game',
-      'free game',
-      'brain teaser',
-      'Level Devil 2',
-      'Level Devil 3',
-      'platform game',
+      'Sprunki Incredibox',
+      'music game',
+      'online music creation',
+      'free music mod',
+      'music remix',
+      'creative music game',
+      'fan-made music game',
     ],
     other: {
       'Cache-Control': 'public, max-age=3600, must-revalidate',
@@ -131,9 +110,23 @@ export default function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon/favicon-16x16.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png"
+        />
       </head>
       <body
         className={cn(

@@ -17,6 +17,15 @@ const nextConfig = {
       },
     ]
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+    domains: ['localhost'],
+  },
 }
 
 export default withNextIntl(nextConfig)

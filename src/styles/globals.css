@@ -91,3 +91,47 @@
     height: 100% !important;
   }
 }
+
+@keyframes gradient-shift {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes gradient-shift-reverse {
+  0% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 8s infinite;
+}
+
+.animate-gradient-shift-reverse {
+  animation: gradient-shift-reverse 8s infinite;
+}

@@ -6,19 +6,19 @@ interface GameDescriptionProps {
 
 export function GameDescription({ locale }: GameDescriptionProps) {
   const titles = {
-    en: 'Level Devil: Free Puzzle Adventure',
-    zh: '恶魔关卡：免费解谜冒险',
-    fr: 'Level Devil : Aventure de Puzzle Gratuite',
-    es: 'Level Devil: Aventura de Puzles Gratuita',
-    ja: 'レベルデビル：無料パズルアドベンチャー'
+    en: 'Sprunki Incredibox: Music Game | Create, Mod & Play Online',
+    zh: 'Sprunki Incredibox：音乐游戏 | 创作、模组和在线游玩',
+    fr: 'Sprunki Incredibox : Jeu Musical | Créez, Moddez et Jouez en Ligne',
+    es: 'Sprunki Incredibox: Juego Musical | Crea, Modifica y Juega en Línea',
+    ja: 'Sprunki Incredibox：音楽ゲーム | 作成、モディファイ、オンラインプレイ',
   }
 
   const descriptions = {
-    en: 'Welcome to Level Devil, your destination...',
-    zh: '欢迎来到恶魔关卡，这里是您免费在线解谜刺激的目的地！...',
-    fr: 'Bienvenue dans Level Devil, votre destination...',
-    es: '¡Bienvenido a Level Devil, tu destino para emocionantes puzles en línea gratuitos! Desafíate con Level Devil 2 y 3, repletos de trampas ingeniosas y sorpresas ocultas. Juega sin problemas en PC o móvil sin necesidad de descargas. Colecciona llaves, navega por obstáculos y conquista cada nivel diabólico. ¡Únete a la aventura hoy y demuestra tus habilidades!',
-    ja: 'レベルデビルへようこそ！無料オンラインパズルの世界で冒険を始めましょう。レベルデビル2と3で、巧妙な罠や隠された驚きに挑戦してください。PCやモバイルでダウンロード不要で楽しめます。鍵を集め、障害物を乗り越え、悪魔的なレベルを征服しましょう。今すぐ冒険に参加して、あなたのスキルを証明しましょう！'
+    en: 'Explore Sprunki Incredibox: A free fan-made music game at sprunkiincrediboxonline.org. Download mods, mix unique sounds, meet characters, and create epic tracks...',
+    zh: '探索Sprunki Incredibox：一款免费的粉丝制作音乐游戏。下载模组，混合独特音效，结识角色，创作史诗音轨。加入社区，在线释放创造力！',
+    fr: 'Découvrez Sprunki Incredibox : Un jeu musical gratuit créé par des fans. Téléchargez des mods, mixez des sons uniques, rencontrez des personnages et créez des pistes épiques. Rejoignez la communauté, libérez votre créativité en ligne !',
+    es: 'Explora Sprunki Incredibox: Un juego musical gratuito creado por fans. Descarga mods, mezcla sonidos únicos, conoce personajes y crea pistas épicas. ¡Únete a la comunidad y libera tu creatividad en línea!',
+    ja: 'Sprunki Incrediboxを探索：ファンが作った無料の音楽ゲーム。MODをダウンロード、ユニークな音を混ぜ、キャラクターと出会い、エピックなトラックを作成。コミュニティに参加し、オンラインで創造性を解放！',
   }
 
   return (
@@ -33,4 +33,4 @@ export function GameDescription({ locale }: GameDescriptionProps) {
       </div>
     </div>
   )
-} 
+}
