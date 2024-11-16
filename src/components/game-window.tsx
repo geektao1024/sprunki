@@ -190,7 +190,7 @@ export function GameWindow({ locale }: GameWindowProps) {
           {/* 分享按钮组 */}
           <div className="flex items-center justify-end gap-2 rounded-lg border bg-card px-4 py-2 shadow-sm">
             <Link
-              href={`https://twitter.com/intent/tweet?text=Play%20Sprunki%20Game%20Online&url=${encodeURIComponent('https://sprunki.org')}`}
+              href={`https://twitter.com/intent/tweet?text=Play%20Sprunki%20Game%20Online&url=${encodeURIComponent('https://sprunkiincrediboxonline.org')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md bg-black/90 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-black"
@@ -202,7 +202,7 @@ export function GameWindow({ locale }: GameWindowProps) {
             </Link>
 
             <Link
-              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://sprunki.org')}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://sprunkiincrediboxonline.org')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md bg-[#1877F2] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#1877F2]/90"
@@ -214,7 +214,7 @@ export function GameWindow({ locale }: GameWindowProps) {
             </Link>
 
             <Link
-              href={`https://reddit.com/submit?url=${encodeURIComponent('https://sprunki.org')}&title=Play%20Sprunki%20Game%20Online`}
+              href={`https://reddit.com/submit?url=${encodeURIComponent('https://sprunkiincrediboxonline.org')}&title=Play%20Sprunki%20Game%20Online`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md bg-[#FF4500] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#FF4500]/90"
@@ -226,7 +226,7 @@ export function GameWindow({ locale }: GameWindowProps) {
             </Link>
 
             <Link
-              href={`https://t.me/share/url?url=${encodeURIComponent('https://sprunki.org')}&text=Play%20Sprunki%20Game%20Online`}
+              href={`https://t.me/share/url?url=${encodeURIComponent('https://sprunkiincrediboxonline.org')}&text=Play%20Sprunki%20Game%20Online`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md bg-[#0088cc] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0088cc]/90"
@@ -238,7 +238,7 @@ export function GameWindow({ locale }: GameWindowProps) {
             </Link>
 
             <Link
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://sprunki.org')}`}
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://sprunkiincrediboxonline.org')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md bg-[#0A66C2] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0A66C2]/90"
