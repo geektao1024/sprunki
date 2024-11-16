@@ -112,3 +112,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## License
 
 [MIT](https://github.com/duy-the-developer/nextjs-tailwind-shadcn-i18n-template/blob/production/LICENSE)
+# sprunki
